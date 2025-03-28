@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Helper commands for TypeScript development.",
   "bin": {
-    "make-class": "./bin/make-class",
-    "make-namespace": "./bin/make-namespace"
+    "make-class": "./bin/make-class-at",
+    "make-namespace": "./bin/make-namespace-at"
   },
   "repository": {
     "type": "git",
