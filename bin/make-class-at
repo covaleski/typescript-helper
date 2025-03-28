@@ -1,13 +1,14 @@
 #!/usr/bin/env node
 
-import { writeFileSync } from "fs";
-import { basename } from "path";
+import { mkdirSync, writeFileSync } from "fs";
+import { basename, dirname } from "path";
 import { argv } from "process";
 import FileFactory from "../src/FileFactory.js";
 
 try {
     const filename = argv[2];
     const className = basename(filename, '.ts');
+    mkdirSync(dirname(filename), {recursive: true});
     const data = new FileFactory()
         .class(className)
         .namespace(className)
