@@ -1,0 +1,23 @@
+{
+  "name": "typescript-helper",
+  "version": "1.0.0",
+  "description": "Helper commands for TypeScript development.",
+  "bin": {
+    "make-class": "./bin/make-class",
+    "make-namespace": "./bin/make-namespace"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/covaleski/typescript-helper.git"
+  },
+  "author": "Rafael Covaleski <covaleski23@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/covaleski/typescript-helper/issues"
+  },
+  "homepage": "https://github.com/covaleski/typescript-helper#readme",
+  "dependencies": {
+    "@types/node": "^22.13.14"
+  },
+  "type": "module"
+}
