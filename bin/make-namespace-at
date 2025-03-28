@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+
+import { writeFileSync } from "fs";
+import { basename } from "path";
+import { argv } from "process";
+import FileFactory from "../src/FileFactory.js";
+
+try {
+    const filename = argv[2];
+    const className = basename(filename, '.ts');
+    const data = new FileFactory()
+        .namespace(className)
+        .export(className, true)
+        .get();
+    writeFileSync(filename, data);
+    console.log(`Created class ${className} at ${filename} successfully.`);
+} catch (err) {
+    console.error(err);
+    console.error('Failed to create class file.');
+}
